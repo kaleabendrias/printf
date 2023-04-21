@@ -16,8 +16,8 @@ int printf_char(va_list val)
 }
 
 /**
- * printd_string - prints string
- * @val: args
+ * printf_string - prints string
+ * @args: args
  * Return: Always
  */
 
