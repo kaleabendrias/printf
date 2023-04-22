@@ -30,7 +30,9 @@ int main(void)
 
     _printf("Character:[%c]\n", 'H');
     printf("Character:[%c]\n", 'H');
-    
+
+    _printf("%b\n", 98);
+
     len = _printf("Percent:[%%]\n");
     len2 = printf("Percent:[%%]\n");
 
