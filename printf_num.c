@@ -8,7 +8,7 @@
 
 int printf_int(va_list args)
 {
-	int i = 0;
+	int i = 0, divisor;
 	int n = va_arg(args, int);
 
 	if (n < 0)
@@ -16,7 +16,7 @@ int printf_int(va_list args)
 		_putchar('-');
 		n = -n;
 	}
-	int divisor = 1;
+	divisor = 1;
 
 	while ((n / divisor) >= 10)
 		divisor *= 10;
