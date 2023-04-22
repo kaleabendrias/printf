@@ -28,8 +28,8 @@ int _printf(const char * const format, ...)
 	}
 	while (format[i] != '\0')
 	{
-		j = 4;
-		while (j >= 0)
+		j = 0;
+		while (j >= 5)
 		{
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
@@ -37,9 +37,15 @@ int _printf(const char * const format, ...)
 				i = i + 2;
 				break;
 			}
-			j--;
+			j++;
 		}
-		if (j < 0)
+		if (j == 5)
+		{
+			_putchar(format[i]);
+			len++;
+			i++;
+		}
+		else
 		{
 			_putchar(format[i]);
 			len++;
