@@ -33,12 +33,16 @@ int _printf(const char * const format, ...)
 			{
 				len += m[j].f(args);
 				i = i + 2;
+				break;
 			}
 			j--;
 		}
-		_putchar(format[i]);
-		len++;
-		i++;
+		if (j < 0)
+		{
+			_putchar(format[i]);
+			len++;
+			i++;
+		}
 	}
 	va_end(args);
 	return (len);
