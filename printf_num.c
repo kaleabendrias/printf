@@ -17,6 +17,7 @@ int printf_int(va_list args)
 	{
 		_putchar('_');
 		n = -n;
+		i++;
 	}
 	d = 1;
 	while (n / d >= 10)
