@@ -15,7 +15,7 @@ int printf_int(va_list args)
 	n = va_arg(args, int);
 	if (n < 0)
 	{
-		_putchar('_');
+		_putchar('-');
 		n = -n;
 		i++;
 	}
