@@ -28,27 +28,18 @@ int _printf(const char * const format, ...)
 	}
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		j = 4;
+		while (j >= 0)
 		{
-			j = 0;
-			while (j < 5)
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				if (m[j].id[1] == format[i + 1])
-				{
-					len += m[j].f(args);
-					i += 2;
-					break;
-				}
-				j++;
+				len += m[j].f(args);
+				i = i + 2;
+				break;
 			}
-			if (j == 5)
-			{
-				_putchar(format[i]);
-				len++;
-				i++;
-			}
+			j--;
 		}
-		else
+		if (j < 0)
 		{
 			_putchar(format[i]);
 			len++;
