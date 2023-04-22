@@ -21,34 +21,25 @@ int _printf(const char * const format, ...)
 
 	va_start(args, format);
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
+		va_end(args);
 		return (-1);
 	}
-
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		j = 4;
+		while (j >= 0)
 		{
-			j = 4;
-			while (j >= 0)
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
-				{
-					len += m[j].f(args);
-					i = i + 2;
-					break;
-				}
-				j--;
+				len += m[j].f(args);
+				i = i + 2;
+				break;
 			}
-			if (j < 0)
-			{
-				_putchar(format[i]);
-				len++;
-				i++;
-			}
+			j--;
 		}
-		else
+		if (j < 0)
 		{
 			_putchar(format[i]);
 			len++;
