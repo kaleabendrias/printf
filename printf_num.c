@@ -6,7 +6,7 @@
  * Return: Always
  */
 
-int printf_int(va_list args)
+int printf_i(va_list args)
 {
 	int i = 0, divisor;
 	int n = va_arg(args, int);
@@ -43,7 +43,7 @@ int printf_int(va_list args)
  * Return: Always
  */
 
-int printf_i(va_list args)
+int printf_int(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
