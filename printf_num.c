@@ -11,6 +11,11 @@ int printf_int(va_list args)
 	int i = 0, divisor;
 	int n = va_arg(args, int);
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	if (n < 0)
 	{
 		_putchar('-');
