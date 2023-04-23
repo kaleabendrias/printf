@@ -8,7 +8,7 @@
  * Return: the number of digits in hexadecimal format
  */
 
-int printf_hex(va_list args)
+int printf_hex1(va_list args)
 {
 	unsigned int num, temp;
 	int digits, i;
