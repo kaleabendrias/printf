@@ -25,6 +25,11 @@ int printf_char(va_list args);
 int printf_string(va_list args);
 int printf_int(va_list args);
 int printf_i(va_list args);
+int printf_b(va_list args);
+int printf_unsigned(va_list args);
+int printf_o(va_list args);
+int printf_hex1(va_list args);
+int printf_hex2(va_list args);
 int _putchar(char c);
 int _printf(const char *format, ...);
 
