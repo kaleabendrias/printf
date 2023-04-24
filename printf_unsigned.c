@@ -12,7 +12,7 @@ int printf_unsigned(va_list args)
 {
 	unsigned int num, divisor;
 	int digits;
-	int digit;
+	int digit
 
 	num = va_arg(args, unsigned int);
 
