@@ -10,7 +10,7 @@
 
 int printf_unsigned(va_list args)
 {
-	unsigned int numdivisor;
+	unsigned int num, divisor;
 	int digits;
 	int digit;
 
