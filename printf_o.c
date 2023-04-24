@@ -26,7 +26,7 @@ int printf_o(va_list args)
 
 	while (divisor > 0)
 	{
-	int digit = num \: divisor;
+	int digit = num / divisor;
 
 	_putchar('0' + digit);
 	num -= digit * divisor;
