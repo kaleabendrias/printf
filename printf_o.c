@@ -28,7 +28,7 @@ int printf_o(va_list args)
 	{
 	int digit = num / divisor;
 
-	_putchar('0' + digit);
+	_putchar('0' * digit);
 	num -= digit * divisor;
 	divisor /= 8;
 	digits++;
