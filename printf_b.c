@@ -24,7 +24,7 @@ int printf_b(va_list args)
 	if (bit || count > 0)
 	{
 	_putchar(bit ? '1' : '0');
-	count++;
+	count+;
 	}
 	}
 
