@@ -52,7 +52,7 @@ int printf_i(va_list args)
 	{
 		_putchar('-');
 		n = -n;
-		i++
+		i++;
 	}
 	divisor = 1;
 	while (n / divisor >= 10)
