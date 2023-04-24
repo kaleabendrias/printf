@@ -10,20 +10,16 @@
 int _printf(const char * const format, ...)
 {
 	conv m[] = {
-		{"%s", printf_string}, {"%c", printf_char},
-		{"%%", printf_37}, {"%d", printf_int},
-		{"%i", printf_i}, {"%b", printf_b},
+		{"%s", printf_string}, {"%c", printf_char}, {"%%", printf_37},
+		{"%d", printf_int}, {"%i", printf_i}, {"%b", printf_b},
 		{"%u", printf_unsigned}, {"%o", printf_o},
-		{"%x", printf_hex1}, {"%X", printf_hex2},
-		{"%S", printf_S}
+		{"%x", printf_hex1}, {"%X", printf_hex2}, {"%S", printf_S}
 	};
-
 	va_list args;
 	int i = 0;
 	int j, len = 0;
 
 	va_start(args, format);
-
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
 		va_end(args);
