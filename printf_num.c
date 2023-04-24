@@ -43,11 +43,17 @@ int printf_int(va_list args)
 
 int printf_i(va_list args)
 {
-	int n, divisor, d, i;
+	int n, divisor, d, i, j;
 
 	n = va_arg(args, int);
 	i = 0;
 
+	if (n == INT_MIN)
+	{
+		for (j = 0; j < 11; j++)
+			_putchar("2147483648"[j]);
+		return (11);
+	}
 	if (n < 0)
 	{
 		_putchar('-');
