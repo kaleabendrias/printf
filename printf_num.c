@@ -43,29 +43,37 @@ int printf_int(va_list args)
 
 int printf_i(va_list args)
 {
-	int n, divisor, digit, i;
+	int n, i, j, tmp;
 
-	n = va_arg(args, int);
 	i = 0;
+	n = va_arg(args, int);
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 		i++;
 	}
-	divisor = 1;
-	while (n / divisor >= 10)
+	tmp = n;
+	while (tmp)
 	{
-		divisor *= 10;
-	}
-	while (divisor > 0)
-	{
-		digit = n / divisor;
-		_putchar(digit + '0');
-		n %= divisor;
-		divisor /= 10;
+		tmp /= 10;
 		i++;
+	}
+	tmp = 1;
+	for (j = 1; j < i; j++)
+		tmp *= 10;
+	while (tmp)
+	{
+		_putchar((n / tmp) + '0');
+		n %= tmp;
+		tmp /= 10;
 	}
 	return (i);
 }
+
