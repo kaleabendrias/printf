@@ -15,8 +15,8 @@ int printf_o(va_list args)
 
 	divisor = 1;
 	num = va_arg(args, unsigned int);
-	temp = num;
-	digits = 0;
+	temp = num
+	digits = 0
 
 	while (temp >= 8)
 	{
