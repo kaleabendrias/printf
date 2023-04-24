@@ -28,7 +28,7 @@ int printf_b(va_list args)
 	}
 	}
 
-	if (cout == 0)
+	if (count == 0)
 	{
 	_putchar('0');
 	count++;
