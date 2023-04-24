@@ -30,6 +30,7 @@ int printf_unsigned(va_list args);
 int printf_o(va_list args);
 int printf_hex1(va_list args);
 int printf_hex2(va_list args);
+int printf_S(va_list args);
 int _putchar(char c);
 int _printf(const char *format, ...);
 
