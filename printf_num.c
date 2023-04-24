@@ -43,38 +43,45 @@ int printf_int(va_list args)
 
 int printf_i(va_list args)
 {
-	int n, count, temp, digits, pow_t, i, digit;
+	int digit, l, pow_t, j, n, c, num;
 
 	n = va_arg(args, int);
-	count = 0;
-	if (n == 0)
+	c = 0;
+	if (n != 0)
+	{
+		if (n < 0)
+		{
+			_putchar('-');
+			c++;
+		}
+		num = n;
+		l = 0;
+		while (num != 0)
+		{
+			num /= 10;
+			l++;
+		}
+		pow_t = 1;
+		for (j = 1; j <= l -1; j++)
+			pow_t *= 10;
+
+		for (j = 1; j <= l; j++)
+		{
+			digit = n / pow_t;
+			if (n < 0)
+				_putchar((digit * -1) + 48);
+			else
+				_putchar(digit + '0');
+			c++;
+			n -= digit * pow_t;
+			pow_t /= 10;
+		}
+	}
+	else
 	{
 		_putchar('0');
 		return (1);
 	}
-	else if (n < 0)
-	{
-		_putchar('-');
-		count++;
-		n = -n;
-	}
-	temp = n;
-	digits = 0;
-	while (temp > 0)
-	{
-		digits++;
-		temp /= 10;
-	}
-	pow_t = 1;
-	for (i = 0; i < digits - 1; i++)
-		pow_t *= 10;
-	while (pow_t > 0)
-	{
-		digit = n / pow_t;
-		_putchar('0' + digit);
-		count++;
-		n -= digit * pow_t;
-		pow_t /= 10;
-	}
-	return (count);
+	return (c);
 }
+
