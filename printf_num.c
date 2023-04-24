@@ -54,6 +54,11 @@ int printf_i(va_list args)
 		n = -n;
 		i++;
 	}
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	divisor = 1;
 	while (n / divisor >= 10)
 	{
