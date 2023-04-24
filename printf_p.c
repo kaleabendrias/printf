@@ -17,13 +17,10 @@ int printf_p(va_list args)
 	ptr = va_arg(args, void*);
 	addr = (unsigned long) ptr;
 	i = 0;
-	while (addr != 0)
-	{
+	do {
 		buffer[i++] = hex_d[addr % 16];
 		addr /= 16;
-	}
-	if (i == 0)
-		buffer[i++] = '0';
+	} while (addr > 0);
 	buffer[i++] = 'x';
 	buffer[i++] = '0';
 	for (j = i - 1; j >= 0; j--)
