@@ -54,7 +54,13 @@ int printf_i(va_list args)
 			_putchar("2147483648"[j]);
 		return (11);
 	}
-	if (n < 0)
+	else if (n == INT_MAX)
+	{
+		for (j = 0; j < 10; j++)
+			_putchar("2147483647"[j]);
+		return (10);
+	}
+	else if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
