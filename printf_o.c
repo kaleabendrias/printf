@@ -22,8 +22,7 @@ int printf_o(va_list args)
 	{
 	temp /= 8;
 	divisor *= 8;
-	}
-
+	r}
 	while (divisor > 0)
 	{
 	int digit = num / divisor;
