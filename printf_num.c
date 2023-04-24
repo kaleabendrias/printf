@@ -43,40 +43,45 @@ int printf_int(va_list args)
 
 int printf_i(va_list args)
 {
-	int n, divisor, d, i, j;
+	int l, pow_t, j, digit, count, num, n;
 
+	count = 0;
 	n = va_arg(args, int);
-	i = 0;
-
-	if (n == INT_MIN)
+	if (n != 0)
 	{
-		for (j = 0; j < 11; j++)
-			_putchar("2147483648"[j]);
-		return (11);
+		if (n < 0)
+		{
+			_putchar('-');
+			count++;
+		}
+		num = n;
+		l = 0;
+		while (num != 0)
+		{
+			num /= 10;
+			l++;
+		}
+		pow_t = 1;
+		for (j = 1; j <= l - 1; j++)
+			pow_t *= 10;
+		for (j = 1; j <= l; j++)
+		{
+			digit = n / pow_t;
+			if (n < 0)
+				_putchar ((digit * -1) + 48);
+			else
+				_putchar(digit + '0');
+			count++;
+			n -= digit * pow_t;
+			pow_t /= 10;
+		}
 	}
-	else if (n == INT_MAX)
+	else
 	{
-		for (j = 0; j < 10; j++)
-			_putchar("2147483647"[j]);
-		return (10);
+		_putchar('0');
+		return (1);
 	}
-	else if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-		i++;
-	}
-	divisor = 1;
-	while (n / divisor >= 10)
-		divisor *= 10;
-	while (divisor > 0)
-	{
-		d = n / divisor;
-		_putchar(d + '0');
-		n %= divisor;
-		divisor /= 10;
-		i++;
-	}
-	return (i);
+	return (count);
 }
+
 
