@@ -13,10 +13,14 @@ int main(void)
     int len2;
     
     unsigned int ui;
+
+    void *addr;
    
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
+
+    addr = (void *)0x7ffe637541f0;
 
     ui = (unsigned int)INT_MAX + 1024;
     
@@ -46,6 +50,9 @@ int main(void)
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 
      _printf("%S\n", "Best\nSchool");
+
+     _printf("Address:[%p]\n", addr);
+    printf("Address:[%p]\n", addr);
 
 
     len = _printf("Percent:[%%]\n");
