@@ -16,7 +16,7 @@ int printf_unsigned(va_list args)
 
 	num = va_arg(args, unsigned int);
 
-	divisor  1;
+	divisor = 1;
 	digits = 1;
 
 	while (num / divisor > 9)
