@@ -15,7 +15,7 @@ int printf_hex1(va_list args)
 
 	char hex[16] = {'0', '1', '2', '3', '4',
 		'5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
-	char hex_num[32];
+	char hex_num[32]
 
 	digits = 0;
 
