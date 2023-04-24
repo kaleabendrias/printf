@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * printf_hex - conversion specifier used to print the unsigned int
+ * printf_hex1 - conversion specifier used to print the unsigned int
  * in hexadecimal lowercase format
  * @args: input
  * Return: the number of digits in hexadecimal format
