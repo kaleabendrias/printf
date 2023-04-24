@@ -51,7 +51,7 @@ int printf_i(va_list args)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;	
+		n = -n;
 		i++
 	}
 	divisor = 1;
