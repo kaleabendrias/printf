@@ -10,7 +10,7 @@
 
 int printf_hex1(va_list args)
 {
-	unsigned int num, ltemp;
+	unsigned int num, temp;
 	int digits, i;
 
 	char hex[16] = {'0', '1', '2', '3', '4',
