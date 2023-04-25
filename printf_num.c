@@ -62,7 +62,7 @@ int printf_i(va_list args)
 			l++;
 		}
 		pow_t = 1;
-		for (j = 1; j <= l -1; j++)
+		for (j = 1; j <= l - 1; j++)
 			pow_t *= 10;
 
 		for (j = 1; j <= l; j++)
