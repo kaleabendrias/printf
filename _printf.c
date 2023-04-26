@@ -13,7 +13,8 @@ int _printf(const char * const format, ...)
 		{"%s", printf_string}, {"%c", printf_char}, {"%%", printf_37},
 		{"%d", printf_int}, {"%i", printf_i}, {"%b", printf_b},
 		{"%u", printf_unsigned}, {"%o", printf_o}, {"%x", printf_hex1},
-		{"%X", printf_hex2}, {"%S", printf_S}, {"%p", printf_p}, {"%r", printf_rev}, {"%R", printf_rot}
+		{"%X", printf_hex2}, {"%S", printf_S}, {"%p", printf_p},
+		{"%r", printf_rev}, {"%R", printf_rot}
 	};
 	va_list args;
 	int i = 0;
