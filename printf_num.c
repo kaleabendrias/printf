@@ -19,6 +19,7 @@ int printf_int(va_list args)
 		i++;
 		n = -(n + 1);
 		n = ~(n - INT_MAX);
+		n++;
 	}
 	else if (n < 0)
 	{
