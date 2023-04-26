@@ -13,15 +13,7 @@ int printf_int(va_list args)
 	int n;
 
 	n = va_arg(args, int);
-	if (n == INT_MIN)
-	{
-		_putchar('-');
-		i++;
-		n = -(n + 1);
-		n = ~(n - INT_MAX);
-		n++;
-	}
-	else if (n < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
