@@ -34,6 +34,7 @@ int printf_hex2(va_list args);
 int printf_S(va_list args);
 int printf_p(va_list args);
 int printf_rev(va_list args);
+int printf_rot(va_list args);
 int _putchar(char c);
 int _printf(const char *format, ...);
 
