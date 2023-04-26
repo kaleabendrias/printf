@@ -19,26 +19,29 @@ int printf_int(va_list args)
 		{
 			_putchar("-2147483648"[j]);
 		}
-		return (i);
+		i = 11;
 	}
-	if (n < 0)
+	else
 	{
-		_putchar('-');
-		n = -n;
-		i++;
-	}
-	d = 1;
-	while (n / d >= 10)
-	{
-		d *= 10;
-	}
-	while (d > 0)
-	{
-		digit = n / d;
-		_putchar(digit + '0');
-		n %= d;
-		d /= 10;
-		i++;
+		if (n < 0)
+		{
+			_putchar('-');
+			n = -n;
+			i++;
+		}
+		d = 1;
+		while (n / d >= 10)
+		{
+			d *= 10;
+		}
+		while (d > 0)
+		{
+			digit = n / d;
+			_putchar(digit + '0');
+			n %= d;
+			d /= 10;
+			i++;
+		}
 	}
 	return (i);
 }
