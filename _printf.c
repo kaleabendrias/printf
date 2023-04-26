@@ -13,7 +13,7 @@ int _printf(const char * const format, ...)
 		{"%s", printf_string}, {"%c", printf_char}, {"%%", printf_37},
 		{"%d", printf_int}, {"%i", printf_i}, {"%b", printf_b},
 		{"%u", printf_unsigned}, {"%o", printf_o}, {"%x", printf_hex1},
-		{"%X", printf_hex2}, {"%S", printf_S}, {"%p", printf_p}
+		{"%X", printf_hex2}, {"%S", printf_S}, {"%p", printf_p}, {"%r", printf_rev}
 	};
 	va_list args;
 	int i = 0;
@@ -27,7 +27,7 @@ int _printf(const char * const format, ...)
 	}
 	while (format[i] != '\0')
 	{
-		j = 11;
+		j = 12;
 		while (j >= 0)
 		{
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
