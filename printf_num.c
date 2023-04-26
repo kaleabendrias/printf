@@ -10,9 +10,17 @@ int printf_int(va_list args)
 {
 	int i = 0;
 	int d, digit;
-	int n;
+	int n, j;
 
 	n = va_arg(args, int);
+	if (n == INT_MIN)
+	{
+		for (j = 0; j < 11; j++)
+		{
+			_putchar("-2147483648"[j]);
+		}
+		return (i);
+	}
 	if (n < 0)
 	{
 		_putchar('-');
