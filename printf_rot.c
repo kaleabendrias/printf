@@ -19,14 +19,14 @@ int printf_rot(va_list args)
 	s = va_arg(args, char *);
 	if (s == NULL)
 		s = "(null)";
-	fo (i = 0; s[i]; i++)
+	for (i = 0; s[i]; i++)
 	{
 		k = 0;
 		for (j = 0; a[j] && !k; j++)
 		{
 			if (s[i] == a[j])
 			{
-				_putchar(beta[j]);
+				_putchar(b[j]);
 				c++;
 				k = 1;
 			}
