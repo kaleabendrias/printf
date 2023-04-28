@@ -3,7 +3,7 @@
 
 /**
  * printf_hex1 - conversion specifier used to print the unsigned intiger
- * in hexadecimal lowercase format
+ * in hexadecimal lowercase form
  * @args: input
  * Return: the number of digits in hexadecimal format
  */
