@@ -5,7 +5,7 @@
  * printf_hex1 - conversion specifier used to print the unsigned intiger
  * in hexadecimal lowercase format
  * @args: input
- * Return: the number of gits in hexadecimal format
+ * Return: the number of digits in hexadecimal format
  */
 
 int printf_hex1(va_list args)
