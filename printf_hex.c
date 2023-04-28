@@ -4,7 +4,7 @@
 /**
  * printf_hex1 - conversion specifier used to print the unsigned intiger
  * in hexadecimal lowercase format
- * @args: input
+ * @args: inpu
  * Return: the number of digits in hexadecimal format
  */
 
